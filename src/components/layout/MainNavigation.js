@@ -1,19 +1,20 @@
 import { Link } from "react-router-dom";
+import styles from './MainNavigation.module.css';
 
 function MainNavigation() {
   return (
     <div>
-      <header>
-        <div>React Meetups</div>
-        <ul>
-          <li>
-            <Link to="/">All Meetups</Link>
+      <header className={styles.header}>
+        <div className={styles.logo}>React Meetups</div>
+        <ul className={styles.ul}>
+          <li className={styles.li}>
+            <Link to="/" className={styles.Link}>All Meetups</Link>
           </li>
-          <li>
-            <Link to="/new-meetup">Add New Meetup</Link>
+          <li className={styles.li}>
+            <Link to="/new-meetup" className={styles.Link}>Add New Meetup</Link>
           </li>
-          <li>
-            <Link to="/favs">Favourites</Link>
+          <li className={styles.li}>
+            <Link to="/favs" className={styles.Link}>Favourites</Link>
           </li>
         </ul>
       </header>
